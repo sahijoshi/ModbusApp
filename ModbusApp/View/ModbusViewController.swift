@@ -12,8 +12,9 @@ class ModbusViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        WebServices.getModbusData { [weak self] (data) in
+            print(data)
+        }
     }
     
 

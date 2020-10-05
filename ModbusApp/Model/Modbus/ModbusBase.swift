@@ -11,7 +11,7 @@ struct ModbusBase: Codable {
 
   enum CodingKeys: String, CodingKey {
     case date
-    case modbus
+    case modbus = "data"
   }
 
   var date: [String]?

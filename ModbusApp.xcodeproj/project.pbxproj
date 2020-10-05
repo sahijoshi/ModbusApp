@@ -17,6 +17,10 @@
 		77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07947252B39B5005D9D0A /* ModbusViewController.swift */; };
 		77B0794D252B4620005D9D0A /* Modbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794B252B4620005D9D0A /* Modbus.swift */; };
 		77B0794E252B4620005D9D0A /* ModbusBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794C252B4620005D9D0A /* ModbusBase.swift */; };
+		77B0795B252B4E3A005D9D0A /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795A252B4E3A005D9D0A /* WebServices.swift */; };
+		77B0795D252B4F79005D9D0A /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795C252B4F79005D9D0A /* NetworkRequest.swift */; };
+		77B0795F252B4FDD005D9D0A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795E252B4FDD005D9D0A /* Router.swift */; };
+		77B07963252B5209005D9D0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07962252B5209005D9D0A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		77B07947252B39B5005D9D0A /* ModbusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusViewController.swift; sourceTree = "<group>"; };
 		77B0794B252B4620005D9D0A /* Modbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modbus.swift; sourceTree = "<group>"; };
 		77B0794C252B4620005D9D0A /* ModbusBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusBase.swift; sourceTree = "<group>"; };
+		77B0795A252B4E3A005D9D0A /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		77B0795C252B4F79005D9D0A /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		77B0795E252B4FDD005D9D0A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		77B07962252B5209005D9D0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +97,8 @@
 				77B07955252B4BA7005D9D0A /* NetworkRequest */,
 				77B07945252B39B5005D9D0A /* Util */,
 				77B07948252B39B5005D9D0A /* Model */,
-				77B07946252B39B5005D9D0A /* View */,
 				77B07944252B39B4005D9D0A /* ViewModel */,
+				77B07946252B39B5005D9D0A /* View */,
 				77B0791E252B393C005D9D0A /* AppDelegate.swift */,
 				77B07920252B393C005D9D0A /* SceneDelegate.swift */,
 				77B07924252B393C005D9D0A /* Main.storyboard */,
@@ -120,6 +128,7 @@
 		77B07945252B39B5005D9D0A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				77B07962252B5209005D9D0A /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -152,6 +161,9 @@
 		77B07955252B4BA7005D9D0A /* NetworkRequest */ = {
 			isa = PBXGroup;
 			children = (
+				77B0795A252B4E3A005D9D0A /* WebServices.swift */,
+				77B0795C252B4F79005D9D0A /* NetworkRequest.swift */,
+				77B0795E252B4FDD005D9D0A /* Router.swift */,
 			);
 			path = NetworkRequest;
 			sourceTree = "<group>";
@@ -258,11 +270,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B0795F252B4FDD005D9D0A /* Router.swift in Sources */,
+				77B0795D252B4F79005D9D0A /* NetworkRequest.swift in Sources */,
 				77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */,
 				77B0794E252B4620005D9D0A /* ModbusBase.swift in Sources */,
 				77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */,
 				77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */,
+				77B0795B252B4E3A005D9D0A /* WebServices.swift in Sources */,
 				77B0794D252B4620005D9D0A /* Modbus.swift in Sources */,
+				77B07963252B5209005D9D0A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
