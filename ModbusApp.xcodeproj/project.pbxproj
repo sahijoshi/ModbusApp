@@ -15,8 +15,8 @@
 		77B07936252B393D005D9D0A /* ModbusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07935252B393D005D9D0A /* ModbusAppTests.swift */; };
 		77B07941252B3965005D9D0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 77B07940252B3965005D9D0A /* README.md */; };
 		77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07947252B39B5005D9D0A /* ModbusViewController.swift */; };
-		77B0794D252B4620005D9D0A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794B252B4620005D9D0A /* Data.swift */; };
-		77B0794E252B4620005D9D0A /* Modbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794C252B4620005D9D0A /* Modbus.swift */; };
+		77B0794D252B4620005D9D0A /* Modbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794B252B4620005D9D0A /* Modbus.swift */; };
+		77B0794E252B4620005D9D0A /* ModbusBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794C252B4620005D9D0A /* ModbusBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,8 @@
 		77B07937252B393D005D9D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B07940252B3965005D9D0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		77B07947252B39B5005D9D0A /* ModbusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusViewController.swift; sourceTree = "<group>"; };
-		77B0794B252B4620005D9D0A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		77B0794C252B4620005D9D0A /* Modbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modbus.swift; sourceTree = "<group>"; };
+		77B0794B252B4620005D9D0A /* Modbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modbus.swift; sourceTree = "<group>"; };
+		77B0794C252B4620005D9D0A /* ModbusBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 		77B0791D252B393C005D9D0A /* ModbusApp */ = {
 			isa = PBXGroup;
 			children = (
-				77B0794A252B39C2005D9D0A /* Network */,
+				77B07955252B4BA7005D9D0A /* NetworkRequest */,
 				77B07945252B39B5005D9D0A /* Util */,
 				77B07948252B39B5005D9D0A /* Model */,
 				77B07946252B39B5005D9D0A /* View */,
@@ -140,21 +140,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		77B0794A252B39C2005D9D0A /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Network;
-			path = ../../Modbus/Modbus/Network;
-			sourceTree = "<group>";
-		};
 		77B07950252B468B005D9D0A /* Modbus */ = {
 			isa = PBXGroup;
 			children = (
-				77B0794C252B4620005D9D0A /* Modbus.swift */,
-				77B0794B252B4620005D9D0A /* Data.swift */,
+				77B0794C252B4620005D9D0A /* ModbusBase.swift */,
+				77B0794B252B4620005D9D0A /* Modbus.swift */,
 			);
 			path = Modbus;
+			sourceTree = "<group>";
+		};
+		77B07955252B4BA7005D9D0A /* NetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,10 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */,
-				77B0794E252B4620005D9D0A /* Modbus.swift in Sources */,
+				77B0794E252B4620005D9D0A /* ModbusBase.swift in Sources */,
 				77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */,
 				77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */,
-				77B0794D252B4620005D9D0A /* Data.swift in Sources */,
+				77B0794D252B4620005D9D0A /* Modbus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  BaseClass.swift
+//  Data.swift
 //
 //  Created by skj on 5.10.2020
 //  Copyright (c) . All rights reserved.
@@ -10,19 +10,25 @@ import Foundation
 struct Modbus: Codable {
 
   enum CodingKeys: String, CodingKey {
-    case date
-    case data
+    case register
+    case name
+    case value
+    case unit
   }
 
-  var date: [String]?
-  var data: [Data]?
+  var register: String?
+  var name: String?
+  var value: String?
+  var unit: String?
 
 
 
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
-    date = try container.decodeIfPresent([String].self, forKey: .date)
-    data = try container.decodeIfPresent([Data].self, forKey: .data)
+    register = try container.decodeIfPresent(String.self, forKey: .register)
+    name = try container.decodeIfPresent(String.self, forKey: .name)
+    value = try container.decodeIfPresent(String.self, forKey: .value)
+    unit = try container.decodeIfPresent(String.self, forKey: .unit)
   }
 
 }
