@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0791E252B393C005D9D0A /* AppDelegate.swift */; };
 		77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07920252B393C005D9D0A /* SceneDelegate.swift */; };
-		77B07923252B393C005D9D0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07922252B393C005D9D0A /* ViewController.swift */; };
 		77B07926252B393C005D9D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07924252B393C005D9D0A /* Main.storyboard */; };
 		77B07928252B393D005D9D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B07927252B393D005D9D0A /* Assets.xcassets */; };
 		77B0792B252B393D005D9D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07929252B393D005D9D0A /* LaunchScreen.storyboard */; };
 		77B07936252B393D005D9D0A /* ModbusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07935252B393D005D9D0A /* ModbusAppTests.swift */; };
+		77B07941252B3965005D9D0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 77B07940252B3965005D9D0A /* README.md */; };
+		77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07947252B39B5005D9D0A /* ModbusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,6 @@
 		77B0791B252B393C005D9D0A /* ModbusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModbusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0791E252B393C005D9D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B07920252B393C005D9D0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77B07922252B393C005D9D0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77B07925252B393C005D9D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77B07927252B393D005D9D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77B0792A252B393D005D9D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		77B07931252B393D005D9D0A /* ModbusAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModbusAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B07935252B393D005D9D0A /* ModbusAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusAppTests.swift; sourceTree = "<group>"; };
 		77B07937252B393D005D9D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B07940252B3965005D9D0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		77B07947252B39B5005D9D0A /* ModbusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		77B07912252B393C005D9D0A = {
 			isa = PBXGroup;
 			children = (
+				77B07940252B3965005D9D0A /* README.md */,
 				77B0791D252B393C005D9D0A /* ModbusApp */,
 				77B07934252B393D005D9D0A /* ModbusAppTests */,
 				77B0791C252B393C005D9D0A /* Products */,
@@ -79,9 +82,13 @@
 		77B0791D252B393C005D9D0A /* ModbusApp */ = {
 			isa = PBXGroup;
 			children = (
+				77B0794A252B39C2005D9D0A /* Network */,
+				77B07948252B39B5005D9D0A /* Model */,
+				77B07945252B39B5005D9D0A /* Util */,
+				77B07946252B39B5005D9D0A /* View */,
+				77B07944252B39B4005D9D0A /* ViewModel */,
 				77B0791E252B393C005D9D0A /* AppDelegate.swift */,
 				77B07920252B393C005D9D0A /* SceneDelegate.swift */,
-				77B07922252B393C005D9D0A /* ViewController.swift */,
 				77B07924252B393C005D9D0A /* Main.storyboard */,
 				77B07927252B393D005D9D0A /* Assets.xcassets */,
 				77B07929252B393D005D9D0A /* LaunchScreen.storyboard */,
@@ -97,6 +104,43 @@
 				77B07937252B393D005D9D0A /* Info.plist */,
 			);
 			path = ModbusAppTests;
+			sourceTree = "<group>";
+		};
+		77B07944252B39B4005D9D0A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77B07945252B39B5005D9D0A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		77B07946252B39B5005D9D0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77B07947252B39B5005D9D0A /* ModbusViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77B07948252B39B5005D9D0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77B0794A252B39C2005D9D0A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			path = ../../Modbus/Modbus/Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +226,7 @@
 			files = (
 				77B0792B252B393D005D9D0A /* LaunchScreen.storyboard in Resources */,
 				77B07928252B393D005D9D0A /* Assets.xcassets in Resources */,
+				77B07941252B3965005D9D0A /* README.md in Resources */,
 				77B07926252B393C005D9D0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,9 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B07923252B393C005D9D0A /* ViewController.swift in Sources */,
 				77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */,
 				77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */,
+				77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
