@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7710C580252C6A8500749281 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C57F252C6A8500749281 /* NetworkError.swift */; };
 		77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0791E252B393C005D9D0A /* AppDelegate.swift */; };
 		77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07920252B393C005D9D0A /* SceneDelegate.swift */; };
 		77B07926252B393C005D9D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07924252B393C005D9D0A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7710C57F252C6A8500749281 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		77B0791B252B393C005D9D0A /* ModbusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModbusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0791E252B393C005D9D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B07920252B393C005D9D0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		77B07955252B4BA7005D9D0A /* NetworkRequest */ = {
 			isa = PBXGroup;
 			children = (
+				7710C57F252C6A8500749281 /* NetworkError.swift */,
 				77B0795A252B4E3A005D9D0A /* WebServices.swift */,
 				77B0795C252B4F79005D9D0A /* NetworkRequest.swift */,
 				77B0795E252B4FDD005D9D0A /* Router.swift */,
@@ -279,6 +282,7 @@
 				77B0795B252B4E3A005D9D0A /* WebServices.swift in Sources */,
 				77B0794D252B4620005D9D0A /* Modbus.swift in Sources */,
 				77B07963252B5209005D9D0A /* Constants.swift in Sources */,
+				7710C580252C6A8500749281 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,14 @@ class ModbusViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebServices.getModbusData { [weak self] (data) in
-            print(data)
+        let service = WebServices()
+        service.getModbusData { (result) in
+            switch result {
+            case .success(let modbus):
+                print("success")
+            case .failure(let error):
+                print("failure")
+            }
         }
     }
     
