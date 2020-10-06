@@ -10,12 +10,13 @@
 		7710C580252C6A8500749281 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C57F252C6A8500749281 /* NetworkError.swift */; };
 		7710C584252C6DA500749281 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C583252C6DA500749281 /* Util.swift */; };
 		7710C586252C6DEC00749281 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C585252C6DEC00749281 /* NetworkLogger.swift */; };
+		7710C589252C725B00749281 /* WebServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C588252C725B00749281 /* WebServicesTests.swift */; };
+		7710C58C252C72B400749281 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C58B252C72B300749281 /* MockURLSession.swift */; };
 		77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0791E252B393C005D9D0A /* AppDelegate.swift */; };
 		77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07920252B393C005D9D0A /* SceneDelegate.swift */; };
 		77B07926252B393C005D9D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07924252B393C005D9D0A /* Main.storyboard */; };
 		77B07928252B393D005D9D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B07927252B393D005D9D0A /* Assets.xcassets */; };
 		77B0792B252B393D005D9D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07929252B393D005D9D0A /* LaunchScreen.storyboard */; };
-		77B07936252B393D005D9D0A /* ModbusAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07935252B393D005D9D0A /* ModbusAppTests.swift */; };
 		77B07941252B3965005D9D0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 77B07940252B3965005D9D0A /* README.md */; };
 		77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07947252B39B5005D9D0A /* ModbusViewController.swift */; };
 		77B0794D252B4620005D9D0A /* Modbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0794B252B4620005D9D0A /* Modbus.swift */; };
@@ -40,6 +41,9 @@
 		7710C57F252C6A8500749281 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7710C583252C6DA500749281 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		7710C585252C6DEC00749281 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		7710C587252C725A00749281 /* ModbusAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModbusAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		7710C588252C725B00749281 /* WebServicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesTests.swift; sourceTree = "<group>"; };
+		7710C58B252C72B300749281 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		77B0791B252B393C005D9D0A /* ModbusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModbusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0791E252B393C005D9D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B07920252B393C005D9D0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 		77B0792A252B393D005D9D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B0792C252B393D005D9D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B07931252B393D005D9D0A /* ModbusAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModbusAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77B07935252B393D005D9D0A /* ModbusAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusAppTests.swift; sourceTree = "<group>"; };
 		77B07937252B393D005D9D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B07940252B3965005D9D0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		77B07947252B39B5005D9D0A /* ModbusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7710C58A252C72A500749281 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7710C58B252C72B300749281 /* MockURLSession.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		77B07912252B393C005D9D0A = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +129,10 @@
 		77B07934252B393D005D9D0A /* ModbusAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				77B07935252B393D005D9D0A /* ModbusAppTests.swift */,
+				7710C58A252C72A500749281 /* Mock */,
+				7710C588252C725B00749281 /* WebServicesTests.swift */,
 				77B07937252B393D005D9D0A /* Info.plist */,
+				7710C587252C725A00749281 /* ModbusAppTests-Bridging-Header.h */,
 			);
 			path = ModbusAppTests;
 			sourceTree = "<group>";
@@ -230,6 +243,7 @@
 					};
 					77B07930252B393D005D9D0A = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 						TestTargetID = 77B0791A252B393C005D9D0A;
 					};
 				};
@@ -298,7 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B07936252B393D005D9D0A /* ModbusAppTests.swift in Sources */,
+				7710C58C252C72B400749281 /* MockURLSession.swift in Sources */,
+				7710C589252C725B00749281 /* WebServicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +500,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModbusAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -495,6 +511,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skj.ModbusAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ModbusAppTests/ModbusAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModbusApp.app/ModbusApp";
@@ -506,6 +524,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModbusAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -516,6 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skj.ModbusAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ModbusAppTests/ModbusAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModbusApp.app/ModbusApp";
