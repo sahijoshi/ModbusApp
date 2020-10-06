@@ -45,8 +45,8 @@ class NetworkRequest {
                     #if DEBUG
                     let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
                     
-                    print(response)
-                    print(jsonData)
+                    dLog(response)
+                    dLog(jsonData)
                     #endif
                                         
                     let requiredData = try JSONDecoder().decode(T.self, from: responseData)

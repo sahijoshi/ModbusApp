@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7710C580252C6A8500749281 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C57F252C6A8500749281 /* NetworkError.swift */; };
+		7710C584252C6DA500749281 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C583252C6DA500749281 /* Util.swift */; };
+		7710C586252C6DEC00749281 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C585252C6DEC00749281 /* NetworkLogger.swift */; };
 		77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0791E252B393C005D9D0A /* AppDelegate.swift */; };
 		77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07920252B393C005D9D0A /* SceneDelegate.swift */; };
 		77B07926252B393C005D9D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07924252B393C005D9D0A /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		7710C57F252C6A8500749281 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		7710C583252C6DA500749281 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		7710C585252C6DEC00749281 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		77B0791B252B393C005D9D0A /* ModbusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModbusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0791E252B393C005D9D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B07920252B393C005D9D0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		77B07945252B39B5005D9D0A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				7710C583252C6DA500749281 /* Util.swift */,
 				77B07962252B5209005D9D0A /* Constants.swift */,
 			);
 			path = Util;
@@ -167,6 +172,7 @@
 				77B0795A252B4E3A005D9D0A /* WebServices.swift */,
 				77B0795C252B4F79005D9D0A /* NetworkRequest.swift */,
 				77B0795E252B4FDD005D9D0A /* Router.swift */,
+				7710C585252C6DEC00749281 /* NetworkLogger.swift */,
 			);
 			path = NetworkRequest;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7710C586252C6DEC00749281 /* NetworkLogger.swift in Sources */,
+				7710C584252C6DA500749281 /* Util.swift in Sources */,
 				77B0795F252B4FDD005D9D0A /* Router.swift in Sources */,
 				77B0795D252B4F79005D9D0A /* NetworkRequest.swift in Sources */,
 				77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */,

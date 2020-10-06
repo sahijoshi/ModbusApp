@@ -50,6 +50,8 @@ enum Router: EndPointType, URLConverter {
                 
         urlRequest.httpMethod = method.rawValue
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        NetworkLogger.log(request: urlRequest)
         return urlRequest
     }
     
