@@ -13,10 +13,20 @@ class ModbusCell: Cell {
     
     private let label = UILabel()
     
+    var isHeader: Bool = false {
+        didSet {
+            label.font = .systemFont(ofSize: 15, weight: .medium)
+            if isHeader {
+                label.font = .systemFont(ofSize: 17, weight: .semibold)
+            }
+        }
+    }
+    
     var title:String = "" {
         didSet {
             label.text = title
             label.textAlignment = .center
+            label.numberOfLines = 0
             contentView.addSubview(label)
         }
     }

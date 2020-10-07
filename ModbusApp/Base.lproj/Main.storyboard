@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TkA-eI-JDq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VOQ-Qc-anL"/>
                                 </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtE-sb-fuk">
@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" id="vAZ-Cr-CQN"/>
                     <connections>
                         <outlet property="lblDate" destination="vtE-sb-fuk" id="0S4-Rx-Snr"/>
-                        <outlet property="searchBar" destination="PqE-PL-EqP" id="HxX-Dt-kgE"/>
+                        <outlet property="searchBar" destination="PqE-PL-EqP" id="lWy-Qw-FDO"/>
                         <outlet property="spreadsheetView" destination="ZXm-bN-rzK" id="n3E-2K-8EQ"/>
                     </connections>
                 </viewController>
@@ -68,6 +68,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YOz-4o-rD9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mL5-YB-BwB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

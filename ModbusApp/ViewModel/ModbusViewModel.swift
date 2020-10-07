@@ -10,19 +10,23 @@ import Foundation
 import UIKit.UIFont
 
 protocol ModbusViewModelPresentable {
+    var filteredModbusData: Box<[[String: String]]?> { get }
     var formattedDate: Box<NSMutableAttributedString?> { get }
-    var data: Box<[[String: String]]?> { get }
+    var searchText: Box<String?> { get set }
     func getModbusData()
 }
 
 final class ModbusViewModel: ModbusViewModelPresentable {
     var formattedDate: Box<NSMutableAttributedString?> = Box(nil)
-    var data: Box<[[String: String]]?> = Box(nil)
     var error: Box<NetworkError?> = Box(nil)
+    var filteredModbusData: Box<[[String: String]]?> = Box(nil)
+    var searchText: Box<String?> = Box(nil)
     
     private var headerValues: [String : String]?
     private var headerKeys: [String]?
     private var date: String?
+    private var data: [[String: String]]?
+    private var columnWidths = [0: 80, 1: 200, 2: 80, 3: 150, 4: 100]
 
     // return number of columns for spreadsheet
     
@@ -32,7 +36,7 @@ final class ModbusViewModel: ModbusViewModelPresentable {
     }
     
     var numberOfRows: Int {
-        guard let data = data.value else { return 0 }
+        guard let data = filteredModbusData.value else { return 0 }
         return data.count + 1
     }
     
@@ -45,25 +49,26 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         guard numberOfRows > 0 else { return 0 }
         return 1
     }
-        
-    // Request for Modbus data from server
     
-    func getModbusData() {
-        WebServices().getModbusData { [weak self] (result) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let modbus):
-                self.data.value = modbus.data
-                self.headerKeys = modbus.headerKey
-                self.headerValues = modbus.headerValue
-                self.formattedDate.value = self.formatDate(date: modbus.date)
-            case . failure(let error):
-                self.error.value = error
+    init() {
+        bindSearchText()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func bindSearchText() {
+        searchText.bind { [unowned self] (searchText) in
+            guard let searchText = searchText, !searchText.isEmpty else {
+                self.resetFilteredData()
+                return
             }
+            self.searchInModbusData(searchText: searchText)
         }
     }
     
-// MARK: - Private Methods
+    private func resetFilteredData() {
+        filteredModbusData.value = data
+    }
     
     private func formatDate(date: String?) -> NSMutableAttributedString? {
         guard let date = date else { return nil }
@@ -72,7 +77,7 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
         let sourceDate = dateFormatter.date(from: date)
         dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
-
+        
         let finalDateString = dateFormatter.string(from: sourceDate!)
         let dateAttributes: [NSMutableAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 17, weight: .bold),
@@ -80,21 +85,51 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         let attributedDate = NSAttributedString(string: "Date: ", attributes: dateAttributes)
         
         let dateAttributesValue: [NSMutableAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 14, weight: .medium),
+            .font: UIFont.systemFont(ofSize: 15, weight: .medium),
         ]
         let attributedDateValue = NSAttributedString(string: finalDateString, attributes: dateAttributesValue)
-
+        
         let combination = NSMutableAttributedString()
         combination.append(attributedDate)
         combination.append(attributedDateValue)
         
         return combination
     }
+    
+    private func searchInModbusData(searchText: String) {
+        guard let data = data else { return }
+
+        let searchText = searchText.lowercased()
+        let predicate = NSPredicate(format: "%K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@", "register", searchText, "variable_name", searchText, "unit", searchText, "regiter_value", searchText )
+        
+        let filteredData = data.filter {
+            return predicate.evaluate(with: $0)
+        }
+        
+        filteredModbusData.value = filteredData
+    }
 }
 
 // MARK: - Public Methods
 
 extension ModbusViewModel {
+    // Request for Modbus data from server
+    
+    func getModbusData() {
+        WebServices().getModbusData { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let modbus):
+                self.data = modbus.data
+                self.headerKeys = modbus.headerKey
+                self.headerValues = modbus.headerValue
+                self.filteredModbusData.value = self.data
+                self.formattedDate.value = self.formatDate(date: modbus.date)
+            case . failure(let error):
+                self.error.value = error
+            }
+        }
+    }
     
     func getHeaderKeyFor(section: Int) -> String {
         guard let headerKey = headerKeys?[section] else { return "" }
@@ -107,9 +142,15 @@ extension ModbusViewModel {
     }
     
     func getModbusPresentableValueAt(index: Int, for key:String) -> String {
-        guard let data = data.value else { return "" }
+        guard let data = filteredModbusData.value else { return "" }
         guard let aDatavalue = data[index][key] else { return "" }
         
         return aDatavalue
     }
+    
+    func getColumnWidthForColumn(column: Int) -> CGFloat {
+        guard let width = columnWidths[column] else { return 0 }
+        return CGFloat(width)
+    }
+    
 }

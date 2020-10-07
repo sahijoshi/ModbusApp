@@ -37,7 +37,7 @@ class ModbusViewController: UIViewController {
     private func bindToViewModel() {
         modbusViewModel = ModbusViewModel()
         modbusViewModel?.getModbusData()
-        modbusViewModel?.data.bind(listener: { [weak self] (data) in
+        modbusViewModel?.filteredModbusData.bind(listener: { [weak self] (data) in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.reloadSpreadview()
@@ -60,22 +60,6 @@ class ModbusViewController: UIViewController {
     private func reloadSpreadview() {
         spreadsheetView.reloadData()
     }
-    
-    //    private func searchModbus(text: String) {
-    //        let searchString = text.lowercased()
-    //        //        let register = "register"
-    //        //        let name = "variable_name"
-    //        //        let unit = "unit"
-    //        //        let value = "regiter_value"
-    //        let predicate = NSPredicate(format: "%K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@", "register", searchString, "variable_name", searchString, "unit", searchString, "regiter_value", searchString )
-    //
-    //        filteredData = modbus!.data?.filter {
-    //            return predicate.evaluate(with: $0)
-    //        }
-    //
-    //        spreadsheetView.reloadData()
-    //    }
-    
 }
 
 // MARK: - SpreadsheetViewDataSource
@@ -89,16 +73,19 @@ extension ModbusViewController: SpreadsheetViewDataSource {
         switch indexPath.row {
         case 0:
             // First row which is a header for spreadsheet
+            cell.isHeader = true
             cell.title = modbusViewModel.getHeaderValueFor(key: headerKey)
         default:
             // Rows of spreadsheet
+            cell.isHeader = false
             cell.title = modbusViewModel.getModbusPresentableValueAt(index: indexPath.row - 1, for: headerKey)
         }
         return cell
     }
     
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, widthForColumn column: Int) -> CGFloat {
-        return CGFloat(150)
+        guard let modbusViewModel = modbusViewModel else { return 0 }
+        return modbusViewModel.getColumnWidthForColumn(column: column)
     }
     
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow row: Int) -> CGFloat {
@@ -138,6 +125,7 @@ extension ModbusViewController: SpreadsheetViewDelegate {
 
 extension ModbusViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //        searchModbus(text: searchText)
+        guard let modbusViewModel = modbusViewModel else { return }
+        modbusViewModel.searchText.value = searchText
     }
 }
