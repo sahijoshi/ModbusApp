@@ -10,11 +10,17 @@ import UIKit
 import SpreadsheetView
 
 class ModbusViewController: UIViewController {
-
+    @IBOutlet weak var spreadsheetView: SpreadsheetView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var lblDate: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let service = WebServices()
-        service.getModbusData { (result) in
+        loadData()
+    }
+    
+    private func loadData() {
+        WebServices().getModbusData { (result) in
             switch result {
             case .success(let modbus):
                 print("success")
@@ -23,7 +29,6 @@ class ModbusViewController: UIViewController {
             }
         }
     }
-    
 
     /*
     // MARK: - Navigation

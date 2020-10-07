@@ -15,10 +15,10 @@ class WebServices {
     /// - Parameter completion: The completion handler takes Modbus model class parameter
     /// - Returns: void
     
-    func getModbusData(completion: @escaping (Result<ModbusBase, NetworkError>) -> ()) {
+    func getModbusData(completion: @escaping (Result<Modbus, NetworkError>) -> ()) {
         let router = Router.getModbusData
         
-        NetworkRequest.request(router, with: session) { (result: Result<ModbusBase, NetworkError>) in
+        NetworkRequest.request(router, with: session) { (result: Result<Modbus, NetworkError>) in
             completion(result)
         }
     }
