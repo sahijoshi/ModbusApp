@@ -14,10 +14,10 @@
 		7710C589252C725B00749281 /* WebServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C588252C725B00749281 /* WebServicesTests.swift */; };
 		7710C58C252C72B400749281 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C58B252C72B300749281 /* MockURLSession.swift */; };
 		7710C58E252C792500749281 /* invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 7710C58D252C792500749281 /* invalid.json */; };
-		7710C590252C792B00749281 /* modbus.json in Resources */ = {isa = PBXBuildFile; fileRef = 7710C58F252C792B00749281 /* modbus.json */; };
 		7710C592252C793200749281 /* MockDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C591252C793200749281 /* MockDataTask.swift */; };
 		7719CFA1252DE8E50031A856 /* Modbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719CFA0252DE8E50031A856 /* Modbus.swift */; };
 		7719CFA3252DED490031A856 /* ModbusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719CFA2252DED490031A856 /* ModbusCell.swift */; };
+		77760486252E261400462778 /* modbus.json in Resources */ = {isa = PBXBuildFile; fileRef = 77760485252E261300462778 /* modbus.json */; };
 		77B0791F252B393C005D9D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0791E252B393C005D9D0A /* AppDelegate.swift */; };
 		77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07920252B393C005D9D0A /* SceneDelegate.swift */; };
 		77B07926252B393C005D9D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B07924252B393C005D9D0A /* Main.storyboard */; };
@@ -50,10 +50,10 @@
 		7710C588252C725B00749281 /* WebServicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServicesTests.swift; sourceTree = "<group>"; };
 		7710C58B252C72B300749281 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		7710C58D252C792500749281 /* invalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalid.json; sourceTree = "<group>"; };
-		7710C58F252C792B00749281 /* modbus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = modbus.json; sourceTree = "<group>"; };
 		7710C591252C793200749281 /* MockDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataTask.swift; sourceTree = "<group>"; };
 		7719CFA0252DE8E50031A856 /* Modbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modbus.swift; sourceTree = "<group>"; };
 		7719CFA2252DED490031A856 /* ModbusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusCell.swift; sourceTree = "<group>"; };
+		77760485252E261300462778 /* modbus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = modbus.json; sourceTree = "<group>"; };
 		77B0791B252B393C005D9D0A /* ModbusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModbusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0791E252B393C005D9D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B07920252B393C005D9D0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +114,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7719CFAF252E1BBD0031A856 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		77B07912252B393C005D9D0A = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +148,7 @@
 				77B07955252B4BA7005D9D0A /* NetworkRequest */,
 				77B07945252B39B5005D9D0A /* Util */,
 				77B07948252B39B5005D9D0A /* Model */,
-				77B07944252B39B4005D9D0A /* ViewModel */,
+				7719CFAF252E1BBD0031A856 /* ViewModel */,
 				77B07946252B39B5005D9D0A /* View */,
 				77B0791E252B393C005D9D0A /* AppDelegate.swift */,
 				77B07920252B393C005D9D0A /* SceneDelegate.swift */,
@@ -157,20 +164,13 @@
 			isa = PBXGroup;
 			children = (
 				7710C58D252C792500749281 /* invalid.json */,
-				7710C58F252C792B00749281 /* modbus.json */,
+				77760485252E261300462778 /* modbus.json */,
 				7710C58A252C72A500749281 /* Mock */,
 				7710C588252C725B00749281 /* WebServicesTests.swift */,
 				77B07937252B393D005D9D0A /* Info.plist */,
 				7710C587252C725A00749281 /* ModbusAppTests-Bridging-Header.h */,
 			);
 			path = ModbusAppTests;
-			sourceTree = "<group>";
-		};
-		77B07944252B39B4005D9D0A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		77B07945252B39B5005D9D0A /* Util */ = {
@@ -336,7 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7710C58E252C792500749281 /* invalid.json in Resources */,
-				7710C590252C792B00749281 /* modbus.json in Resources */,
+				77760486252E261400462778 /* modbus.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

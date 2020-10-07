@@ -41,7 +41,7 @@ class WebServicesTests: XCTestCase {
     
     func testGetModbusDataOnSuccessReturnModbus() {
         let service = WebServices()
-        var modbus: [Modbus]?
+        var modbus: [[String: String]]?
         
         let bundle = Bundle(for: WebServicesTests.self)
         guard let jsonPath = bundle.path(forResource: "modbus", ofType: "json") else { XCTFail(); return }
@@ -57,7 +57,7 @@ class WebServicesTests: XCTestCase {
             service.getModbusData {(result) in
                 switch result {
                 case .success(let modbusBase):
-                    modbus = modbusBase.modbus
+                    modbus = modbusBase.data
                     modbusExpectation.fulfill()
                 case .failure:
                     print("handle error")
