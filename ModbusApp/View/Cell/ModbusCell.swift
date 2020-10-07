@@ -13,9 +13,9 @@ class ModbusCell: Cell {
     
     private let label = UILabel()
     
-    var data:String = "" {
+    var title:String = "" {
         didSet {
-            label.text = data
+            label.text = title
             label.textAlignment = .center
             contentView.addSubview(label)
         }
