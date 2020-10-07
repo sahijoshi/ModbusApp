@@ -7,20 +7,23 @@
 //
 
 import Foundation
+import UIKit.UIFont
 
 protocol ModbusViewModelPresentable {
-    var date: String? { get }
+    var formattedDate: Box<NSMutableAttributedString?> { get }
     var data: Box<[[String: String]]?> { get }
     func getModbusData()
 }
 
 final class ModbusViewModel: ModbusViewModelPresentable {
-    var date: String?
-    private var headerKeys: [String]?
+    var formattedDate: Box<NSMutableAttributedString?> = Box(nil)
     var data: Box<[[String: String]]?> = Box(nil)
-    private var headerValues: [String : String]?
     var error: Box<NetworkError?> = Box(nil)
     
+    private var headerValues: [String : String]?
+    private var headerKeys: [String]?
+    private var date: String?
+
     // return number of columns for spreadsheet
     
     var numberOfColumns: Int {
@@ -42,7 +45,7 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         guard numberOfRows > 0 else { return 0 }
         return 1
     }
-    
+        
     // Request for Modbus data from server
     
     func getModbusData() {
@@ -53,11 +56,45 @@ final class ModbusViewModel: ModbusViewModelPresentable {
                 self.data.value = modbus.data
                 self.headerKeys = modbus.headerKey
                 self.headerValues = modbus.headerValue
+                self.formattedDate.value = self.formatDate(date: modbus.date)
             case . failure(let error):
                 self.error.value = error
             }
         }
     }
+    
+// MARK: - Private Methods
+    
+    private func formatDate(date: String?) -> NSMutableAttributedString? {
+        guard let date = date else { return nil }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
+        let sourceDate = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "MMM dd, yyyy h:mm a"
+
+        let finalDateString = dateFormatter.string(from: sourceDate!)
+        let dateAttributes: [NSMutableAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 17, weight: .bold),
+        ]
+        let attributedDate = NSAttributedString(string: "Date: ", attributes: dateAttributes)
+        
+        let dateAttributesValue: [NSMutableAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 14, weight: .medium),
+        ]
+        let attributedDateValue = NSAttributedString(string: finalDateString, attributes: dateAttributesValue)
+
+        let combination = NSMutableAttributedString()
+        combination.append(attributedDate)
+        combination.append(attributedDateValue)
+        
+        return combination
+    }
+}
+
+// MARK: - Public Methods
+
+extension ModbusViewModel {
     
     func getHeaderKeyFor(section: Int) -> String {
         guard let headerKey = headerKeys?[section] else { return "" }
@@ -75,5 +112,4 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         
         return aDatavalue
     }
-    
 }

@@ -44,6 +44,13 @@ class ModbusViewController: UIViewController {
             }
         })
         
+        modbusViewModel?.formattedDate.bind(listener: { [weak self] (date) in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.lblDate.attributedText = date
+            }
+        })
+        
         modbusViewModel?.error.bind(listener: { (error) in
             // Handle error
             dLog(error?.localizedDescription)
