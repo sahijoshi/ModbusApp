@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702D1A017AEA4CF28271D67A /* Pods_ModbusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB39AC2864479CFBFE10BCC /* Pods_ModbusApp.framework */; };
 		7710C580252C6A8500749281 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C57F252C6A8500749281 /* NetworkError.swift */; };
 		7710C584252C6DA500749281 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C583252C6DA500749281 /* Util.swift */; };
 		7710C586252C6DEC00749281 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C585252C6DEC00749281 /* NetworkLogger.swift */; };
@@ -28,6 +29,7 @@
 		77B0795D252B4F79005D9D0A /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795C252B4F79005D9D0A /* NetworkRequest.swift */; };
 		77B0795F252B4FDD005D9D0A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795E252B4FDD005D9D0A /* Router.swift */; };
 		77B07963252B5209005D9D0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07962252B5209005D9D0A /* Constants.swift */; };
+		9679422602B8AD0932B3CD8D /* Pods_ModbusAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,12 @@
 		77B0795C252B4F79005D9D0A /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		77B0795E252B4FDD005D9D0A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		77B07962252B5209005D9D0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModbusAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FB6403EC7AE30254D86C8C /* Pods-ModbusAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusAppTests.release.xcconfig"; path = "Target Support Files/Pods-ModbusAppTests/Pods-ModbusAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D30E1CF31CE8821FD13954B /* Pods-ModbusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusApp.release.xcconfig"; path = "Target Support Files/Pods-ModbusApp/Pods-ModbusApp.release.xcconfig"; sourceTree = "<group>"; };
+		BBD1C31A175FA3483A1D07BA /* Pods-ModbusAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ModbusAppTests/Pods-ModbusAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEB39AC2864479CFBFE10BCC /* Pods_ModbusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModbusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CDB26BF768C06A00B0223D /* Pods-ModbusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusApp.debug.xcconfig"; path = "Target Support Files/Pods-ModbusApp/Pods-ModbusApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702D1A017AEA4CF28271D67A /* Pods_ModbusApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9679422602B8AD0932B3CD8D /* Pods_ModbusAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,13 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		7719CF9D252DD8990031A856 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		77B07912252B393C005D9D0A = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +120,8 @@
 				77B0791D252B393C005D9D0A /* ModbusApp */,
 				77B07934252B393D005D9D0A /* ModbusAppTests */,
 				77B0791C252B393C005D9D0A /* Products */,
+				A9EE94FC673EC599A95FB285 /* Pods */,
+				BC457659BFF475739466FEAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +184,7 @@
 		77B07946252B39B5005D9D0A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7719CF9D252DD8990031A856 /* Cell */,
 				77B07947252B39B5005D9D0A /* ModbusViewController.swift */,
 			);
 			path = View;
@@ -199,6 +219,27 @@
 			path = NetworkRequest;
 			sourceTree = "<group>";
 		};
+		A9EE94FC673EC599A95FB285 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2CDB26BF768C06A00B0223D /* Pods-ModbusApp.debug.xcconfig */,
+				9D30E1CF31CE8821FD13954B /* Pods-ModbusApp.release.xcconfig */,
+				BBD1C31A175FA3483A1D07BA /* Pods-ModbusAppTests.debug.xcconfig */,
+				88FB6403EC7AE30254D86C8C /* Pods-ModbusAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC457659BFF475739466FEAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEB39AC2864479CFBFE10BCC /* Pods_ModbusApp.framework */,
+				7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B0793A252B393D005D9D0A /* Build configuration list for PBXNativeTarget "ModbusApp" */;
 			buildPhases = (
+				90355F614D023B95AB5A384C /* [CP] Check Pods Manifest.lock */,
 				77B07917252B393C005D9D0A /* Sources */,
 				77B07918252B393C005D9D0A /* Frameworks */,
 				77B07919252B393C005D9D0A /* Resources */,
+				6518B882C2BC56000C091B0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B0793D252B393D005D9D0A /* Build configuration list for PBXNativeTarget "ModbusAppTests" */;
 			buildPhases = (
+				D86DCB72BEBD70466A83DD77 /* [CP] Check Pods Manifest.lock */,
 				77B0792D252B393D005D9D0A /* Sources */,
 				77B0792E252B393D005D9D0A /* Frameworks */,
 				77B0792F252B393D005D9D0A /* Resources */,
@@ -298,6 +342,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6518B882C2BC56000C091B0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModbusApp/Pods-ModbusApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ModbusApp/Pods-ModbusApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ModbusApp/Pods-ModbusApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90355F614D023B95AB5A384C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModbusApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D86DCB72BEBD70466A83DD77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModbusAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77B07917252B393C005D9D0A /* Sources */ = {
@@ -475,6 +583,7 @@
 		};
 		77B0793B252B393D005D9D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2CDB26BF768C06A00B0223D /* Pods-ModbusApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +601,7 @@
 		};
 		77B0793C252B393D005D9D0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D30E1CF31CE8821FD13954B /* Pods-ModbusApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -509,6 +619,7 @@
 		};
 		77B0793E252B393D005D9D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD1C31A175FA3483A1D07BA /* Pods-ModbusAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,6 +644,7 @@
 		};
 		77B0793F252B393D005D9D0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88FB6403EC7AE30254D86C8C /* Pods-ModbusAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
