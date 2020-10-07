@@ -18,6 +18,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PqE-PL-EqP">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TkA-eI-JDq"/>
+                                </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtE-sb-fuk">
                                 <rect key="frame" x="0.0" y="144" width="414" height="50"/>
@@ -50,6 +53,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="vAZ-Cr-CQN"/>
                     <connections>
+                        <outlet property="lblDate" destination="vtE-sb-fuk" id="0S4-Rx-Snr"/>
+                        <outlet property="searchBar" destination="PqE-PL-EqP" id="HxX-Dt-kgE"/>
                         <outlet property="spreadsheetView" destination="ZXm-bN-rzK" id="n3E-2K-8EQ"/>
                     </connections>
                 </viewController>

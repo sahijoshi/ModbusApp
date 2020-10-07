@@ -52,6 +52,7 @@ class NetworkRequest {
                     let requiredData = try JSONDecoder().decode(T.self, from: responseData)
                     completion(.success(requiredData))
                 } catch {
+                    dLog(error)
                     completion(.failure(NetworkError.notDecodable))
                 }
             case .failure(let networkError):
