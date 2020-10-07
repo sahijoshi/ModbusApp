@@ -22,7 +22,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="VOQ-Qc-anL"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtE-sb-fuk">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXm-bN-rzK" customClass="SpreadsheetView" customModule="SpreadsheetView">
+                                <rect key="frame" x="0.0" y="194" width="414" height="619"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-mq-dcP">
+                                <rect key="frame" x="107" y="437.5" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Snc-jV-eQl"/>
+                                    <constraint firstAttribute="width" constant="200" id="d7m-PK-S0g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtE-sb-fuk">
                                 <rect key="frame" x="0.0" y="144" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="s3a-GM-z6h"/>
@@ -31,13 +45,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXm-bN-rzK" customClass="SpreadsheetView" customModule="SpreadsheetView">
-                                <rect key="frame" x="0.0" y="194" width="414" height="619"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NaV-mq-dcP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Zm-hI-Tej"/>
                             <constraint firstItem="PqE-PL-EqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1iJ-yl-xXw"/>
                             <constraint firstItem="ZXm-bN-rzK" firstAttribute="top" secondItem="vtE-sb-fuk" secondAttribute="bottom" id="3r1-uy-j4H"/>
                             <constraint firstItem="ZXm-bN-rzK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6XT-ZH-vTI"/>
@@ -46,6 +57,7 @@
                             <constraint firstItem="ZXm-bN-rzK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XIs-jf-oBk"/>
                             <constraint firstItem="PqE-PL-EqP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZqE-Zp-ZeD"/>
                             <constraint firstItem="PqE-PL-EqP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eOO-IC-nFN"/>
+                            <constraint firstItem="NaV-mq-dcP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eSf-cT-EdG"/>
                             <constraint firstItem="vtE-sb-fuk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qlH-2Q-6GQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vtE-sb-fuk" secondAttribute="trailing" id="wHA-uI-Ogu"/>
                         </constraints>
@@ -54,6 +66,7 @@
                     <navigationItem key="navigationItem" id="vAZ-Cr-CQN"/>
                     <connections>
                         <outlet property="lblDate" destination="vtE-sb-fuk" id="0S4-Rx-Snr"/>
+                        <outlet property="lblNoSearchResult" destination="NaV-mq-dcP" id="ce9-H1-lwj"/>
                         <outlet property="searchBar" destination="PqE-PL-EqP" id="lWy-Qw-FDO"/>
                         <outlet property="spreadsheetView" destination="ZXm-bN-rzK" id="n3E-2K-8EQ"/>
                     </connections>

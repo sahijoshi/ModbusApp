@@ -13,6 +13,7 @@ protocol ModbusViewModelPresentable {
     var filteredModbusData: Box<[[String: String]]?> { get }
     var formattedDate: Box<NSMutableAttributedString?> { get }
     var searchText: Box<String?> { get set }
+    var noSearchResultMessage: Box<String?> { get }
     func getModbusData()
 }
 
@@ -21,6 +22,7 @@ final class ModbusViewModel: ModbusViewModelPresentable {
     var error: Box<NetworkError?> = Box(nil)
     var filteredModbusData: Box<[[String: String]]?> = Box(nil)
     var searchText: Box<String?> = Box(nil)
+    var noSearchResultMessage: Box<String?> = Box(nil)
     
     private var headerValues: [String : String]?
     private var headerKeys: [String]?
@@ -107,6 +109,11 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         }
         
         filteredModbusData.value = filteredData
+        checkForEmptyData(data: filteredModbusData.value)
+    }
+    
+    private func checkForEmptyData(data: [[String: String]]?) {
+        noSearchResultMessage.value = data!.isEmpty ? "No Search Results." : ""
     }
 }
 
@@ -125,6 +132,7 @@ extension ModbusViewModel {
                 self.headerValues = modbus.headerValue
                 self.filteredModbusData.value = self.data
                 self.formattedDate.value = self.formatDate(date: modbus.date)
+                self.checkForEmptyData(data: self.filteredModbusData.value)
             case . failure(let error):
                 self.error.value = error
             }

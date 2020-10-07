@@ -13,7 +13,8 @@ class ModbusViewController: UIViewController {
     @IBOutlet weak var spreadsheetView: SpreadsheetView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var lblDate: UILabel!
-    
+    @IBOutlet weak var lblNoSearchResult: UILabel!
+
     var modbusViewModel: ModbusViewModel?
     
     override func viewDidLoad() {
@@ -44,8 +45,7 @@ class ModbusViewController: UIViewController {
             }
         })
         
-        modbusViewModel?.formattedDate.bind(listener: { [weak self] (date) in
-            guard let self = self else { return }
+        modbusViewModel?.formattedDate.bind(listener: { [unowned self] (date) in
             DispatchQueue.main.async {
                 self.lblDate.attributedText = date
             }
@@ -54,6 +54,12 @@ class ModbusViewController: UIViewController {
         modbusViewModel?.error.bind(listener: { (error) in
             // Handle error
             dLog(error?.localizedDescription)
+        })
+        
+        modbusViewModel?.noSearchResultMessage.bind(listener: { [unowned self] (message) in
+            guard let message = message else { return }
+            self.lblNoSearchResult.isHidden = message.isEmpty
+            self.lblNoSearchResult.text = message
         })
     }
     
