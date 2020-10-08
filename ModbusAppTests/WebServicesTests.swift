@@ -13,7 +13,7 @@ class WebServicesTests: XCTestCase {
     var mockHTTPURLResponse: HTTPURLResponse?
 
     override func setUpWithError() throws {
-        mockHTTPURLResponse = HTTPURLResponse.init(url: URL(string: "https://modbus-app.herokuapp.com")!, statusCode: 200, httpVersion: "2.0", headerFields: nil)!
+        mockHTTPURLResponse = HTTPURLResponse.init(url: URL(string: "https://modbus-prod.herokuapp.com")!, statusCode: 200, httpVersion: "2.0", headerFields: nil)!
     }
     
     override func tearDownWithError() throws {
@@ -33,7 +33,7 @@ class WebServicesTests: XCTestCase {
             // process result
         }
         
-        XCTAssertEqual(mockURLSession.cachedURL?.host, "modbus-app.herokuapp.com", "Invalid Host")
+        XCTAssertEqual(mockURLSession.cachedURL?.host, "modbus-prod.herokuapp.com", "Invalid Host")
         XCTAssertEqual(mockURLSession.cachedURL?.path, "/modbus", "Invalid path")
     }
     
