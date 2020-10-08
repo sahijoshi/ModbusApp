@@ -27,6 +27,7 @@ class ModbusCell: Cell {
             label.text = title
             label.textAlignment = .center
             label.numberOfLines = 0
+            label.textColor = .darkGray
             contentView.addSubview(label)
         }
     }

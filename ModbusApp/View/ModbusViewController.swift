@@ -29,14 +29,14 @@ class ModbusViewController: UIViewController {
     private func setupNavigation() {
         title = "Modbus"
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .red
+        navigationController?.navigationBar.barTintColor = UIColor(red: 57, green: 88, blue: 108)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func setupSpreadsheetView() {
         spreadsheetView.bounces = false
         spreadsheetView.register(ModbusCell.self, forCellWithReuseIdentifier: ModbusCell.identifier)
-        spreadsheetView.gridStyle = .solid(width: 1, color: .link)
+        spreadsheetView.gridStyle = .solid(width: 1, color: .lightGray)
         spreadsheetView.dataSource = self
         spreadsheetView.delegate = self
     }
@@ -85,14 +85,18 @@ extension ModbusViewController: SpreadsheetViewDataSource {
         let cell = spreadsheetView.dequeueReusableCell(withReuseIdentifier: ModbusCell.identifier, for: indexPath) as! ModbusCell
         guard let modbusViewModel = modbusViewModel else { return cell }
         let headerKey = modbusViewModel.getHeaderKeyFor(section: indexPath.section)
-        
+        cell.backgroundColor = .lightText
         switch indexPath.row {
         case 0:
             // First row which is a header for spreadsheet
             cell.isHeader = true
             cell.title = modbusViewModel.getHeaderValueFor(key: headerKey)
+            cell.backgroundColor = UIColor(red: 240, green: 240, blue: 240)
         default:
             // Rows of spreadsheet
+            if indexPath.section == 0 {
+                cell.backgroundColor = UIColor(red: 240, green: 240, blue: 240)
+            }
             cell.isHeader = false
             cell.title = modbusViewModel.getModbusPresentableValueAt(index: indexPath.row - 1, for: headerKey)
         }
@@ -105,7 +109,7 @@ extension ModbusViewController: SpreadsheetViewDataSource {
     }
     
     func spreadsheetView(_ spreadsheetView: SpreadsheetView, heightForRow row: Int) -> CGFloat {
-        return CGFloat(50)
+        return CGFloat(40)
     }
     
     func numberOfColumns(in spreadsheetView: SpreadsheetView) -> Int {

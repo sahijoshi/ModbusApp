@@ -28,7 +28,7 @@ final class ModbusViewModel: ModbusViewModelPresentable {
     private var headerKeys: [String]?
     private var date: String?
     private var data: [[String: String]]?
-    private var columnWidths = [0: 80, 1: 200, 2: 80, 3: 150, 4: 100]
+    private var columnWidths = [0: 70, 1: 200, 2: 80, 3: 150, 4: 100]
 
     // return number of columns for spreadsheet
     
@@ -87,7 +87,7 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         let dateAttributes: [NSMutableAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 17, weight: .bold),
         ]
-        let attributedDate = NSAttributedString(string: "Date: ", attributes: dateAttributes)
+        let attributedDate = NSAttributedString(string: " Date: ", attributes: dateAttributes)
         
         let dateAttributesValue: [NSMutableAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 15, weight: .medium),

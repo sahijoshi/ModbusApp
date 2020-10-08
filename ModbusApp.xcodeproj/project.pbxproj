@@ -17,6 +17,7 @@
 		7710C592252C793200749281 /* MockDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710C591252C793200749281 /* MockDataTask.swift */; };
 		7719CFA1252DE8E50031A856 /* Modbus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719CFA0252DE8E50031A856 /* Modbus.swift */; };
 		7719CFA3252DED490031A856 /* ModbusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719CFA2252DED490031A856 /* ModbusCell.swift */; };
+		771D40B6252F21C20085758C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771D40B5252F21C20085758C /* UIColor+Extension.swift */; };
 		77760486252E261400462778 /* modbus.json in Resources */ = {isa = PBXBuildFile; fileRef = 77760485252E261300462778 /* modbus.json */; };
 		77760489252E27B100462778 /* ModbusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77760488252E27B100462778 /* ModbusViewModel.swift */; };
 		7776048B252E27BE00462778 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7776048A252E27BE00462778 /* Box.swift */; };
@@ -56,6 +57,7 @@
 		7710C591252C793200749281 /* MockDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataTask.swift; sourceTree = "<group>"; };
 		7719CFA0252DE8E50031A856 /* Modbus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modbus.swift; sourceTree = "<group>"; };
 		7719CFA2252DED490031A856 /* ModbusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusCell.swift; sourceTree = "<group>"; };
+		771D40B5252F21C20085758C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		77760485252E261300462778 /* modbus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = modbus.json; sourceTree = "<group>"; };
 		77760488252E27B100462778 /* ModbusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModbusViewModel.swift; sourceTree = "<group>"; };
 		7776048A252E27BE00462778 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		771D40B4252F21AC0085758C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				771D40B5252F21C20085758C /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		77760487252E279700462778 /* Box */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 		77B07945252B39B5005D9D0A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				771D40B4252F21AC0085758C /* Extensions */,
 				7710C583252C6DA500749281 /* Util.swift */,
 				77B07962252B5209005D9D0A /* Constants.swift */,
 			);
@@ -445,6 +456,7 @@
 				7719CFA3252DED490031A856 /* ModbusCell.swift in Sources */,
 				77B07921252B393C005D9D0A /* SceneDelegate.swift in Sources */,
 				77B07949252B39B5005D9D0A /* ModbusViewController.swift in Sources */,
+				771D40B6252F21C20085758C /* UIColor+Extension.swift in Sources */,
 				77B0795B252B4E3A005D9D0A /* WebServices.swift in Sources */,
 				77B07963252B5209005D9D0A /* Constants.swift in Sources */,
 				77760489252E27B100462778 /* ModbusViewModel.swift in Sources */,
