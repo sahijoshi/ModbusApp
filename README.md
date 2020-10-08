@@ -3,6 +3,7 @@
 This is an iOS-based mobile application developed for displaying Modbus live feed data in mobile app. The app gets data from Node.js in JSON format backend as described [here](https://github.com/sahijoshi/ModbusBackend). 
 
 # Preview
+<img src="https://raw.githubusercontent.com/sahijoshi/ModbusApp/master/Assets/modbus.gif" width="300"/>
 
 # Technology
 - Programming Language: Swift 5
@@ -18,6 +19,7 @@ This is an iOS-based mobile application developed for displaying Modbus live fee
 - Open .xcworkspace file inside project folder with XCode.
 
 # Architecture
+<img src="https://raw.githubusercontent.com/sahijoshi/ModbusApp/master/Assets/architecture.png" width="300"/>
 
 # Implementation
 - The Modbus data is received as JSON format.
@@ -93,14 +95,33 @@ This is an iOS-based mobile application developed for displaying Modbus live fee
 - MVVM architctural patter has been followed, which has been clearly separated with name and folder in XCode project.
 - Modbus class is a Model, ModbusViewController is View, and ModbusViewModel is ViewModel which is responsible for all business logic and interaction between view and model.
 - Data binding has been achieved with Boxing using property observers.
+- Search on Modbus data has been achieved by using predicate.
+#### Code
+``` bash
+private func searchInModbusData(searchText: String) {
+        guard let data = data else { return }
+
+        let searchText = searchText.lowercased()
+        let predicate = NSPredicate(format: "%K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@ OR %K CONTAINS[cd] %@", "register", searchText, "variable_name", searchText, "unit", searchText, "regiter_value", searchText )
+        
+        let filteredData = data.filter {
+            return predicate.evaluate(with: $0)
+        }
+        
+        filteredModbusData.value = filteredData
+        checkForEmptyData(data: filteredModbusData.value)
+    }
+```
 
 # Testing
 - Unit test has been implemented with XCTest.
 - Travis CI has been integrated on GitHub repo which takes care of Continuos Integration.
 
 #### GitHub
+<img src="https://raw.githubusercontent.com/sahijoshi/ModbusApp/master/Assets/github.png" width="500"/>
 
 #### Travis CI
+<img src="https://raw.githubusercontent.com/sahijoshi/ModbusApp/master/Assets/travis.png" width="500"/>
 
 # Author
 Sahi Joshi, sahik.joshi@gmail.com
