@@ -159,7 +159,7 @@ class ModbusViewModelTests: XCTestCase {
     }
     
     func testCorrectFormattedDateIsReturned() {
-        let expectedDate = "Date: Aug 03, 2018 4:06 AM"
+        let expectedDate = " Date: Aug 03, 2018 4:06 AM"
         
         let expectation = self.expectation(description: "correct date format is returned")
         var receivedDate = ""
