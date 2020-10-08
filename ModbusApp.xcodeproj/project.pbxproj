@@ -178,12 +178,12 @@
 		77B07934252B393D005D9D0A /* ModbusAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				7710C588252C725B00749281 /* WebServicesTests.swift */,
+				77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */,
 				77F3B0CE252E708B00E62037 /* json */,
 				7710C58A252C72A500749281 /* Mock */,
-				7710C588252C725B00749281 /* WebServicesTests.swift */,
 				77B07937252B393D005D9D0A /* Info.plist */,
 				7710C587252C725A00749281 /* ModbusAppTests-Bridging-Header.h */,
-				77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */,
 			);
 			path = ModbusAppTests;
 			sourceTree = "<group>";

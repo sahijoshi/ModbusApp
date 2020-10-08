@@ -19,11 +19,19 @@ class ModbusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigation()
         setupSpreadsheetView()
         bindToViewModel()
     }
     
     // MARK: - Private Methods
+    
+    private func setupNavigation() {
+        title = "Modbus"
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .red
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
     
     private func setupSpreadsheetView() {
         spreadsheetView.bounces = false
@@ -58,8 +66,10 @@ class ModbusViewController: UIViewController {
         
         modbusViewModel?.noSearchResultMessage.bind(listener: { [unowned self] (message) in
             guard let message = message else { return }
-            self.lblNoSearchResult.isHidden = message.isEmpty
-            self.lblNoSearchResult.text = message
+            DispatchQueue.main.async {
+                self.lblNoSearchResult.isHidden = message.isEmpty
+                self.lblNoSearchResult.text = message
+            }
         })
     }
     
