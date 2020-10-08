@@ -32,6 +32,9 @@
 		77B0795D252B4F79005D9D0A /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795C252B4F79005D9D0A /* NetworkRequest.swift */; };
 		77B0795F252B4FDD005D9D0A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795E252B4FDD005D9D0A /* Router.swift */; };
 		77B07963252B5209005D9D0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07962252B5209005D9D0A /* Constants.swift */; };
+		77D7B024252F906700B62053 /* travis.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B021252F906600B62053 /* travis.png */; };
+		77D7B025252F906700B62053 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B022252F906600B62053 /* github.png */; };
+		77D7B026252F906700B62053 /* modbus.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B023252F906700B62053 /* modbus.gif */; };
 		77F3B0D0252E70DD00E62037 /* ModbusViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */; };
 		9679422602B8AD0932B3CD8D /* Pods_ModbusAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		77B0795C252B4F79005D9D0A /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		77B0795E252B4FDD005D9D0A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		77B07962252B5209005D9D0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		77D7B021252F906600B62053 /* travis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travis.png; sourceTree = "<group>"; };
+		77D7B022252F906600B62053 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
+		77D7B023252F906700B62053 /* modbus.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = modbus.gif; sourceTree = "<group>"; };
 		77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusViewModelTests.swift; sourceTree = "<group>"; };
 		7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModbusAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FB6403EC7AE30254D86C8C /* Pods-ModbusAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusAppTests.release.xcconfig"; path = "Target Support Files/Pods-ModbusAppTests/Pods-ModbusAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		77B07912252B393C005D9D0A = {
 			isa = PBXGroup;
 			children = (
+				77D7B020252F904400B62053 /* Assets */,
 				77B07940252B3965005D9D0A /* README.md */,
 				77B0791D252B393C005D9D0A /* ModbusApp */,
 				77B07934252B393D005D9D0A /* ModbusAppTests */,
@@ -244,6 +251,16 @@
 				7710C585252C6DEC00749281 /* NetworkLogger.swift */,
 			);
 			path = NetworkRequest;
+			sourceTree = "<group>";
+		};
+		77D7B020252F904400B62053 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				77D7B022252F906600B62053 /* github.png */,
+				77D7B023252F906700B62053 /* modbus.gif */,
+				77D7B021252F906600B62053 /* travis.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		77F3B0CE252E708B00E62037 /* json */ = {
@@ -360,8 +377,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D7B025252F906700B62053 /* github.png in Resources */,
+				77D7B026252F906700B62053 /* modbus.gif in Resources */,
 				77B0792B252B393D005D9D0A /* LaunchScreen.storyboard in Resources */,
 				77B07928252B393D005D9D0A /* Assets.xcassets in Resources */,
+				77D7B024252F906700B62053 /* travis.png in Resources */,
 				77B07941252B3965005D9D0A /* README.md in Resources */,
 				77B07926252B393C005D9D0A /* Main.storyboard in Resources */,
 			);
