@@ -31,6 +31,7 @@
 		77B0795D252B4F79005D9D0A /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795C252B4F79005D9D0A /* NetworkRequest.swift */; };
 		77B0795F252B4FDD005D9D0A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0795E252B4FDD005D9D0A /* Router.swift */; };
 		77B07963252B5209005D9D0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B07962252B5209005D9D0A /* Constants.swift */; };
+		77F3B0D0252E70DD00E62037 /* ModbusViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */; };
 		9679422602B8AD0932B3CD8D /* Pods_ModbusAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		77B0795C252B4F79005D9D0A /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		77B0795E252B4FDD005D9D0A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		77B07962252B5209005D9D0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusViewModelTests.swift; sourceTree = "<group>"; };
 		7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModbusAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FB6403EC7AE30254D86C8C /* Pods-ModbusAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusAppTests.release.xcconfig"; path = "Target Support Files/Pods-ModbusAppTests/Pods-ModbusAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D30E1CF31CE8821FD13954B /* Pods-ModbusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusApp.release.xcconfig"; path = "Target Support Files/Pods-ModbusApp/Pods-ModbusApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,12 +178,12 @@
 		77B07934252B393D005D9D0A /* ModbusAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				7710C58D252C792500749281 /* invalid.json */,
-				77760485252E261300462778 /* modbus.json */,
+				77F3B0CE252E708B00E62037 /* json */,
 				7710C58A252C72A500749281 /* Mock */,
 				7710C588252C725B00749281 /* WebServicesTests.swift */,
 				77B07937252B393D005D9D0A /* Info.plist */,
 				7710C587252C725A00749281 /* ModbusAppTests-Bridging-Header.h */,
+				77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */,
 			);
 			path = ModbusAppTests;
 			sourceTree = "<group>";
@@ -231,6 +233,15 @@
 				7710C585252C6DEC00749281 /* NetworkLogger.swift */,
 			);
 			path = NetworkRequest;
+			sourceTree = "<group>";
+		};
+		77F3B0CE252E708B00E62037 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				7710C58D252C792500749281 /* invalid.json */,
+				77760485252E261300462778 /* modbus.json */,
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 		A9EE94FC673EC599A95FB285 /* Pods */ = {
@@ -448,6 +459,7 @@
 			files = (
 				7710C58C252C72B400749281 /* MockURLSession.swift in Sources */,
 				7710C592252C793200749281 /* MockDataTask.swift in Sources */,
+				77F3B0D0252E70DD00E62037 /* ModbusViewModelTests.swift in Sources */,
 				7710C589252C725B00749281 /* WebServicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,6 @@ protocol ModbusViewModelPresentable {
     var formattedDate: Box<NSMutableAttributedString?> { get }
     var searchText: Box<String?> { get set }
     var noSearchResultMessage: Box<String?> { get }
-    func getModbusData()
 }
 
 final class ModbusViewModel: ModbusViewModelPresentable {
@@ -23,7 +22,8 @@ final class ModbusViewModel: ModbusViewModelPresentable {
     var filteredModbusData: Box<[[String: String]]?> = Box(nil)
     var searchText: Box<String?> = Box(nil)
     var noSearchResultMessage: Box<String?> = Box(nil)
-    
+   
+    private let service: WebServices?
     private var headerValues: [String : String]?
     private var headerKeys: [String]?
     private var date: String?
@@ -36,6 +36,8 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         guard let headerKeys = headerKeys else { return 0 }
         return headerKeys.count
     }
+    
+    // return number of columns for spreadsheet
     
     var numberOfRows: Int {
         guard let data = filteredModbusData.value else { return 0 }
@@ -52,7 +54,8 @@ final class ModbusViewModel: ModbusViewModelPresentable {
         return 1
     }
     
-    init() {
+    init(service: WebServices = WebServices()) {
+        self.service = service
         bindSearchText()
     }
     
@@ -122,8 +125,8 @@ final class ModbusViewModel: ModbusViewModelPresentable {
 extension ModbusViewModel {
     // Request for Modbus data from server
     
-    func getModbusData() {
-        WebServices().getModbusData { [weak self] (result) in
+    func getModbusData(_ completion: @escaping (Bool) -> () = {_ in}) {
+        service?.getModbusData { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let modbus):
@@ -133,6 +136,7 @@ extension ModbusViewModel {
                 self.filteredModbusData.value = self.data
                 self.formattedDate.value = self.formatDate(date: modbus.date)
                 self.checkForEmptyData(data: self.filteredModbusData.value)
+                completion(true)
             case . failure(let error):
                 self.error.value = error
             }
