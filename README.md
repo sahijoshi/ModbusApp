@@ -7,7 +7,7 @@ This is an iOS-based mobile application developed for displaying Modbus live fee
 
 # Technology
 - Programming Language: Swift 5
-- IDE: XCode 11.6
+- IDE: Xcode 11.6
 - Travis CI for unit test and continuous integration
 - Architecturer Pattern: MVVM
 
@@ -16,7 +16,7 @@ This is an iOS-based mobile application developed for displaying Modbus live fee
 
 # Installation
 - Download from the repository.
-- Open .xcworkspace file inside project folder with XCode.
+- Open .xcworkspace file inside project folder with Xcode.
 
 # Architecture
 <img src="https://raw.githubusercontent.com/sahijoshi/ModbusApp/master/Assets/architecture.png" width="300"/>
@@ -92,7 +92,7 @@ This is an iOS-based mobile application developed for displaying Modbus live fee
     }
 ```
 
-- MVVM architctural patter has been followed, which has been clearly separated with name and folder in XCode project.
+- MVVM architctural pattern has been followed, which has been clearly separated with name and folder in Xcode project.
 - Modbus class is a Model, ModbusViewController is View, and ModbusViewModel is ViewModel which is responsible for all business logic and interaction between view and model.
 - Data binding has been achieved with Boxing using property observers.
 - Search on Modbus data has been achieved by using predicate.
