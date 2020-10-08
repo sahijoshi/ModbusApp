@@ -35,6 +35,7 @@
 		77D7B024252F906700B62053 /* travis.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B021252F906600B62053 /* travis.png */; };
 		77D7B025252F906700B62053 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B022252F906600B62053 /* github.png */; };
 		77D7B026252F906700B62053 /* modbus.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B023252F906700B62053 /* modbus.gif */; };
+		77D7B028252F91C600B62053 /* architecture.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D7B027252F91C600B62053 /* architecture.png */; };
 		77F3B0D0252E70DD00E62037 /* ModbusViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */; };
 		9679422602B8AD0932B3CD8D /* Pods_ModbusAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		77D7B021252F906600B62053 /* travis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travis.png; sourceTree = "<group>"; };
 		77D7B022252F906600B62053 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
 		77D7B023252F906700B62053 /* modbus.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = modbus.gif; sourceTree = "<group>"; };
+		77D7B027252F91C600B62053 /* architecture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = architecture.png; sourceTree = "<group>"; };
 		77F3B0CF252E70DD00E62037 /* ModbusViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModbusViewModelTests.swift; sourceTree = "<group>"; };
 		7B306952ECD43280FD5D7EA3 /* Pods_ModbusAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModbusAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FB6403EC7AE30254D86C8C /* Pods-ModbusAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModbusAppTests.release.xcconfig"; path = "Target Support Files/Pods-ModbusAppTests/Pods-ModbusAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		77D7B020252F904400B62053 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				77D7B027252F91C600B62053 /* architecture.png */,
 				77D7B022252F906600B62053 /* github.png */,
 				77D7B023252F906700B62053 /* modbus.gif */,
 				77D7B021252F906600B62053 /* travis.png */,
@@ -383,6 +386,7 @@
 				77B07928252B393D005D9D0A /* Assets.xcassets in Resources */,
 				77D7B024252F906700B62053 /* travis.png in Resources */,
 				77B07941252B3965005D9D0A /* README.md in Resources */,
+				77D7B028252F91C600B62053 /* architecture.png in Resources */,
 				77B07926252B393C005D9D0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
