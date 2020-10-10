@@ -1,4 +1,4 @@
-# ModbusApp
+# ModbusApp + MVVM + Unit testing + CI
 
 This is an iOS-based mobile application developed for displaying Modbus live feed data in mobile app. The app gets data from Node.js in JSON format backend as described [here](https://github.com/sahijoshi/ModbusBackend). 
 
